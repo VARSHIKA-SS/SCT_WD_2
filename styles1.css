@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+body {
+  background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #444;
+}
+
+.stopwatch {
+  background: #fff;
+  border: 3px solid #a3d8f4;
+  border-radius: 25px;
+  padding: 40px 35px;
+  width: 340px;
+  height: 460px;
+  text-align: center;
+  box-shadow:
+    0 0 15px rgba(163, 216, 244, 0.8),
+    0 0 30px rgba(255, 182, 193, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+}
+
+h1 {
+  color: #ff6699;
+  font-size: 2.6rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px rgba(255, 102, 153, 0.6);
+}
+
+#display {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 2px;
+  margin: 10px 0;
+  user-select: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+}
+
+button {
+  flex: 1 1 45%;
+  margin: 0;
+  background: linear-gradient(135deg, #a3d8f4, #ffb6c1);
+  border: none;
+  border-radius: 12px;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(255, 182, 193, 0.7);
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #a3d8f4;
+  width: 100%;
+  margin: 10px 0;
+}
+
+#laps {
+  max-height: 130px;
+  overflow-y: auto;
+  color: #444;
+  font-weight: 600;
+  font-family: monospace;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.lap {
+  margin-bottom: 6px;
+  padding: 6px 10px;
+  background: #fdf5f7;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lap:nth-child(odd) {
+  background: #f0faff;
+}
+
+.shortcut-hint {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: auto;
+}
